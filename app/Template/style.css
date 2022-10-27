@@ -78,3 +78,7 @@ text-decoration: underline;
     color: white;
     margin-bottom: 20px;
 }
+
+.flutuacao-dir{
+    float:right;
+}

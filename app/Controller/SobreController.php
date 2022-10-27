@@ -1,18 +1,18 @@
 <?php
 
-    class HomeController
+    class SobreController
     {
         public function index()
         {
-            try{
-                $colecPostagens =Postagem::selecionaTodos();
-                
+            
                 $loader = new \Twig\Loader\FilesystemLoader('app/View');
                 $twig = new \Twig\Environment($loader);
-                $template = $twig->load('home.html');
+                $template = $twig->load('sobre.html');
+                
+               
 
                 $parametros = array();
-                $parametros['postagens'] = $colecPostagens;
+               
                 
                 
                 $conteudo = $template->render($parametros);
@@ -21,9 +21,8 @@
                 
 
                 
-            }catch(Exception $erro){    
-                echo $erro->getMessage();
-            }
+              
+            
            
         }
     } 
